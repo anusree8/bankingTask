@@ -1,0 +1,31 @@
+class Banking:
+    def __init__(self):
+        self.balence=0
+        print("Welcome to banking system")
+
+    def account_login(self):
+        user_name= input("Please enter user name:")
+        account_no =int(input("please enter valid account number:"))
+
+    def deposit(self):
+        amount_deposit=int(input("Enter the amount to be deposite"))
+        self.balence+=amount_deposit
+        print("Desposite amount is",amount_deposit)
+
+    def withdrawal(self):
+        withdrawal_amount=int(input("Enter the amount to be withdrawal"))
+        if self.balence>withdrawal_amount:
+            print("Withdrawal successfuly")
+        else:
+             print("Unsuficient balence")
+
+        self.balence -= withdrawal_amount
+
+    def display(self):
+        print("Current balence is",self.balence)
+
+A=Banking()
+A.account_login()
+A.deposit()
+A.withdrawal()
+A.display()
